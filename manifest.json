@@ -1,0 +1,24 @@
+{
+    "short_name": "ChasTester",
+    "name": "Sto testando il chas:33",
+    "icons": [
+      {
+        "src": "teleport(1).png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "teleport.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "#3367D6",
+    "description": "Chas testing"
+  }
+  

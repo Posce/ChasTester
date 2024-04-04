@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-size: 100vw;
     overflow: hidden;  
-   
+   position: fixed;
   }
 
   html, body {

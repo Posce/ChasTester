@@ -8,7 +8,6 @@
 </head>
 <body>
     <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.9.3, SVG Export Plug-In . SVG Version: 9.03 Build 53313)  -->
 <svg version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 264.6 264.6" style="enable-background:new 0 0 264.6 264.6;" xml:space="preserve">
 <style type="text/css">
@@ -27,30 +26,49 @@
 <!--<div class="wrapper_slider">
         <input id="slider" type="range" min="0" max="100" step="2" value="0">
         
-      </div>-->
+    </div>-->
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+    <script>
+
+        const firebaseConfig = {
+      
+          apiKey: "AIzaSyB9HDfFCnuSsUUp8g7oI86snKX_PWlFAhc",
+      
+          authDomain: "chastester-7b5d0.firebaseapp.com",
+      
+          databaseURL: "https://chastester-7b5d0-default-rtdb.europe-west1.firebasedatabase.app",
+      
+          projectId: "chastester-7b5d0",
+      
+          storageBucket: "chastester-7b5d0.appspot.com",
+      
+          messagingSenderId: "100086642620",
+      
+          appId: "1:100086642620:web:4ef019e8c3fd52cb491db9"
+      
+        };
+      
+      
+        // Initialize Firebase
+      
+        firebase.initializeApp(firebaseConfig);
+      
+      </script>
+       
 <script>
 const r = document.querySelector(':root');
-
-document.addEventListener('DOMContentLoaded', function() {
-  r.style.setProperty('--amp', 0);
+const database = firebase.database();
+var ampe = firebase.database().ref('Data/amp');
+ampe.on('value', (snapshot) => {
+  const amp = snapshot.val();
+  console.log(amp);
+  r.style.setProperty('--amp', amp);
 });
-var slider = document.querySelector("input[type='range']");
-
-  // EventListener für das Verändern des Sliders hinzufügen
-  slider.addEventListener("change", function(){
-  r.style.setProperty('--amp', this.value);
-});
-
-
-window.onload = function() {
-    var el = document.documentElement,
-        rfs = el.requestFullScreen
-        || el.webkitRequestFullScreen
-        || el.mozRequestFullScreen;
-    rfs.call(el);
-};
 
 
 </script>
+
 </body>
 </html>
+

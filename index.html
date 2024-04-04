@@ -59,18 +59,33 @@
       </script>
        
 <script>
+
+function getRandomInt(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
+
+
+
 const r = document.querySelector(':root');
 const database = firebase.database();
 var ampe = firebase.database().ref('Data/amp');
+var amp;
 ampe.on('value', (snapshot) => {
-  const amp = snapshot.val();
+  amp = snapshot.val();
   console.log(amp);
-  r.style.setProperty('--amp', amp);
 });
+setInterval(() => {
+  var amp2 = getRandomInt(-5, 5);
+  console.log(amp2);
+  console.log(amp);
+  amp2 = amp2 + amp;
+  r.style.setProperty('--amp', amp2);
+}, 200);
 
 
 </script>
 
 </body>
 </html>
-

@@ -20,6 +20,8 @@ body {
   svg {
     transform: scale(2) translateY(44px) ;
     max-height: 480px;
+       -webkit-filter: drop-shadow( 7px 2px 1px rgba(0, 0, 0, .4));
+  filter: drop-shadow( 7px 2px 1px rgba(0, 0, 0, .3));
   .fix {
      fill: rgb(0, 0, 0);
   }

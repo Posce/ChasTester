@@ -13,6 +13,11 @@ body {
    
   }
 
+  html, body {
+  overflow-y:hidden;
+  height:100%;
+}
+
   svg {
     transform: scale(2) translateY(44px) ;
     max-height: 480px;

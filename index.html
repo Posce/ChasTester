@@ -71,13 +71,20 @@ function getRandomInt(min, max) {
 const r = document.querySelector(':root');
 const database = firebase.database();
 var ampe = firebase.database().ref('Data/amp');
-var amp;
+var jumpe = firebase.database().ref('Data/jumpi');
 ampe.on('value', (snapshot) => {
   amp = snapshot.val();
+  
   console.log(amp);
 });
+jumpe.on('value', (snapshot) => {
+  jumpi = snapshot.val(); 
+  
+  console.log(jumpi);
+});
+
 setInterval(() => {
-  var amp2 = getRandomInt(-5, 5);
+  var amp2 = getRandomInt(-jumpi, jumpi);
   console.log(amp2);
   console.log(amp);
   amp2 = amp2 + amp;

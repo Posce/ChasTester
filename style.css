@@ -15,7 +15,7 @@ body {
 
   svg {
     transform: translateY(44px);
-    Scale: 2;
+    transform: scale(2);
     max-height: 480px;
   .fix {
      fill: rgb(0, 0, 0);
